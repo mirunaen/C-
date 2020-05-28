@@ -1,26 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
-int main(void){
-
-    int n ;
-    int a0 , a1 , sum ;
-    int i ;
-    
-    printf ("Introduce hasta que termino de la serie de Fibonacci quieres: ") ;
-    scanf ("%d" , &n) ;
-    
-    a0 = 0 ;
-    a1 = 1 ;
-    
-    for (i = 0 ; i < n ; i++) {
-        sum = a0 + a1 ;
-        
-        a0 = a1;
-        a1 = sum;
-        
-        printf(" %d " , a0) ;
-    } ;
-    
-    return 0;
-}
+int main(){
+  int num,positive_num=0, num_negative=0,cero;
+  
+  cout<< "Ingresa un num(0 para parar) : ";
+  cin >> num;
+  while(num){
+  	if (num >0)
+  	positive_num++;
+  	else if(num < 0 )
+  	num_negative++;
+  	cout<<"Ingresa otro num (0 para parar): ";
+  	cin >> num;
+  }
+  cout<< "Numeros positivos: "<< positive_num;
+  cout<< " Numeros negativos : "<< num_negative;
+  
+  return 0; 
+	}
